@@ -1,0 +1,96 @@
+/* Empty. Add your own CSS if you like */
+#map_canvas {
+    margin-top: 43px;
+    height: 100%;
+    width: 100%;
+}
+
+.angular-google-map {
+    height: 100%; 
+    width: 100%;
+}
+
+.angular-google-map-container {
+    height: 100%; 
+    width: 100%;
+}
+
+/*input.ng-dirty {
+    border-bottom: 1px solid red;
+}*/
+/*input.ng-invalid.ng-dirty {
+    border-bottom: 1px solid red;   
+}
+
+input.ng-invalid-email.ng-dirty {
+    border-bottom: 1px solid red;   
+}*/
+
+.error {
+    text-align: center;
+    background-color: #ee6e73;
+    color: #CCC;
+}
+.custom-pull-right {
+    float:right;
+}
+.custom-center {
+    text-align:center;
+}
+
+.flex-container {
+    text-align:center;
+}
+
+.custom-padding-top {
+    padding-top: 30px;
+}
+
+.custom-padding-right-sm {
+    padding-right:10px;
+}
+
+.custom-padding {
+  padding: 25px;
+}
+
+.custom-margin-bottom {
+  margin-bottom : 20px;
+}
+
+.gm-style-iw > div {
+  overflow: visible !important;
+}
+.item.item-center {
+    text-align: center;
+}
+.item-no-divider {
+    border : transparent;
+}
+.custom-margin-top {
+    margin-top:50px;
+}
+.slider-slide {
+    padding-bottom: 50px;
+}
+.center {
+    text-align: center;
+}
+
+.first-line-modal {
+        padding-top: 20px;
+}
+
+.light-gray {
+    color: #777;
+}
+
+.modal-buttons {
+    margin-top: 82px;
+}
+.vote-box {
+    width: 80px;    
+}
+.align-left {
+    text-align: left;
+}

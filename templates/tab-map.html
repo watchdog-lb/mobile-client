@@ -1,0 +1,34 @@
+
+<ion-view view-title="Map">      
+    <ion-nav-buttons side="right">
+        <button class="button button-clear button-positive" ng-click="logout()" ng-show="currentAuth !== null">Logout</button>
+    </ion-nav-buttons> 
+    
+        <div id="map_canvas" >
+          <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options"  data-tap-disabled="true" events="map.events">
+            
+            <ui-gmap-marker
+                idKey='1'
+                coords='{latitude:report.coordinates[0], longitude: report.coordinates[1]}'
+                ng-repeat="report in filteredReports"
+                options = "{icon:'img/garbage_2.png'}"
+                click='markerClicked()'
+            >
+            <ui-gmap-window >
+                <div> 
+                    <a class="item item-thumbnail-left" >
+                        <img  ng-src="{{ report.image || 'http://placehold.it/350x350' }}" />
+                        <h2>
+                            Verdun, Beirut
+                        </h2>
+                        <h3>
+                            {{ report.description }}
+                        </h3>
+                    </a>
+                </div>
+            </ui-gmap-window>
+            </ui-gmap-marker>
+            </ui-gmap-google-map>
+        </div>
+    
+</ion-view>

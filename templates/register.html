@@ -1,0 +1,23 @@
+<ion-view title="Register">
+    <ion-content has-header="true" has-tabs="true" padding="true">
+        <form name="form" ng-submit="signUp(user)">
+        <div class="list">
+          
+            <label class="item item-input">
+                <span class="input-label">Email</span>
+                <input type="email" ng-model="user.email" required>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" ng-model="user.password">
+            </label>
+        </div>
+        <div class="assertive" ng-show="error">{{error}}</div>
+        <input  class="button button-block button-positive" type="submit" value="Sign up" ng-disabled="(form.$invalid || !form.$dirty || state.loading)">
+      
+        <a class="button button-block button-clear button-calm" href="#/login">
+            Already a User ? Log in !
+        </a>
+        </form>
+    </ion-content>
+</ion-view>
