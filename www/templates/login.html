@@ -1,0 +1,26 @@
+<ion-view title="Login">
+      <ion-nav-buttons side="right">
+        <a href="#/register" class="button button-clear button-positive" >Register</a>
+    </ion-nav-buttons>
+    <ion-content has-header="true" has-tabs="true" padding="true">
+        <form name="form" ng-submit="signIn(user)">
+        <div class="list">
+          
+            <label class="item item-input">
+                <span class="input-label">Email</span>
+                <input type="email" ng-model="user.email">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" ng-model="user.password">
+            </label>
+        </div>
+        <div class="assertive" ng-show="error">{{error}}</div>
+        <input  class="button button-block button-positive" type="submit" value="Login" ng-disabled="(form.$invalid || !form.$dirty || state.loading)">
+      
+        <a class="button button-block button-clear button-calm" href="#/forgot">
+            Forgot your password?
+        </a>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,91 @@
+
+<ion-view view-title="Report">
+  <ion-content>
+  
+  <div class="list">
+
+      <div class="padding">
+        <div class="pic-preview-container" ng-if="state.pictureShown">
+          <img id= "pic-preview" ng-src="{{form.imgPreview}}" />
+        </div>
+        <div class="assertive" ng-show="state.cameraError">{{state.cameraError}}</div>
+
+      </div>
+      
+      <div class="padding">
+        <label class="item item-input item-select custom-margin-bottom">
+        <div class="input-label">
+          Region
+        </div>
+        <select  ng-model="form.region">
+            <option value="beirut">
+              Beirut
+            </option>
+            <option value="nabatieh">
+              Nabatieh
+            </option>
+            <option value="north">
+              North
+            </option>
+            <option value="mountlebanon">
+              Mount Lebanon
+            </option>
+            <option value="south">
+              south
+            </option>
+        </select>
+      </label>
+    </div>
+
+      <div class="padding">
+        <label class="item item-input item-select custom-margin-bottom">
+        <div class="input-label">
+          Category
+        </div>
+        <select  ng-model="form.category">
+            <option value="violence">
+              Violence
+            </option>
+            <option value="garbage">
+              Garbage
+            </option>
+            <option value="fire">
+              Fire
+            </option>
+            <option value="accident">
+              Accident
+            </option>
+            <option value="infra_damage">
+              Infrastructure Damage
+            </option>
+        </select>
+      </label>
+    </div>
+
+
+      <div class="padding">
+        <label class="item item-input custom-margin-bottom">
+          <span class="input-label"> Description </span>
+          <textarea type="text" ng-model="form.description" ></textarea>
+        </label>
+      </div>
+
+      
+
+      <div class="padding">
+        <button class="button button-block button-positive"  ng-click="submitReport()">
+          Submit
+        </button>
+      </div>
+
+  </div>
+
+      
+  <div class="row row-center">
+
+  </div>
+      
+      
+  </div>
+  </ion-content>
+</ion-view>

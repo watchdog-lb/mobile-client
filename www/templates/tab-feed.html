@@ -1,0 +1,36 @@
+
+ <ion-view view-title="Feed">
+<ion-nav-buttons side="right">
+        <button class="button button-clear button-positive" ng-click="logout()" ng-show="currentAuth !== null">Logout</button>
+        <a class="button button-clear button-positive" href="/#/login" ng-show="currentAuth === null">Login</a>
+    </ion-nav-buttons> 
+<ion-content >
+    <ion-list can-swipe="true">
+        <ion-item ng-repeat ="report in filteredReports | orderBy: '-created_at' ">
+            
+            <ion-option-button class="button-balanced" ng-click="upvote(report.$id)" ng-disabled = "vote[report.$id]=='up'"> 
+                <div class="vote-box">
+                    Upvote 
+                </div>
+            </ion-option-button>
+            <ion-option-button class="button-assertive" ng-disabled = "vote[report.$id]=='down'"
+                       ng-click="downvote(report.$id)">
+                       <div class="vote-box">Downvote</div></ion-option-button>
+
+            <ion-option-button class="button-light"
+                       ng-click="goToDetails(report.$id)" >
+                <div class="vote-box">Details</div>
+            </ion-option-button>
+                       
+            <button  href="#/tab/feed/{{report.$id}}" class="item item-thumbnail-left"    >
+                
+                <img  ng-src="{{ report.image || 'http://placehold.it/350x350' }}" />
+                <div style="white-space: normal;" ng-bind="report.description"></div>
+                <h4 class="padding align-left">
+                    {{ report.region | region }}
+                </h4>
+            </a>
+        </ion-item>
+    </ion-list>
+</ion-content>
+</ion-view>
