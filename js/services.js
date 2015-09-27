@@ -3,17 +3,6 @@ angular.module('app.services', [])
 .factory('Auth', ['$firebaseAuth', function($firebaseAuth){
     var ref = new Firebase("https://watchdoglb.firebaseio.com");
 
-
-    var tempRef = new Firebase("https://watchdoglb.firebaseio.com/reports");
-    var done = function(error) {
-      if (error) {
-        console.log('Synchronization failed');
-      } else {
-        console.log('Synchronization succeeded');
-      }
-    };
-    tempRef.remove();
-
     return $firebaseAuth(ref);
 }])
 .factory('Report', ['$firebaseAuth', '$firebaseArray','$firebaseObject', function($firebaseAuth, $firebaseArray, $firebaseObject){
